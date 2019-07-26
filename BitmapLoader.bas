@@ -7,13 +7,14 @@ Private Const HEADERSIZE_OFFSET = 14
 Private Const FILESIZE_OFFSET = 2
 
 Function Main(target As Worksheet, filePath As String)
-    Dim intFileNum As Integer, bytTemp As Byte
+    Dim intFileNum As Integer
+    Dim bytTemp As Byte
     Dim bytes() As Byte
     intFileNum = FreeFile
  
     Open filePath For Binary Access Read As intFileNum
 
-    Dim i As Integer
+    Dim i As Long
     
     i = 0
 
